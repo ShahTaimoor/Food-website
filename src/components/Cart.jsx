@@ -15,7 +15,7 @@ const Cart = () => {
 
       <div className="fixed right-5 text-3xl bottom-4">
         <p className="text-sm absolute  -right-3 -top-3 bg-red-600 text-white px-2 rounded-full">{cartItems.length}</p>
-        <CiShoppingCart className={`text-3xl cursor-pointer `} onClick={() => setOpen(true)} />
+        <CiShoppingCart className={`text-3xl cursor-pointer ${cartItems.length > 0 && 'animate-bounce' }  `} onClick={() => setOpen(true)} />
       </div>
       {
         <section
