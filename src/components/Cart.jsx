@@ -18,13 +18,27 @@ const Cart = () => {
         open &&
 
         <section
-  
-        className='bg-white fixed  top-0 right-0 w-[20vw] h-full'>
+
+          className='bg-white fixed  top-0 right-0 w-[20vw] h-full'>
           <div className="flex mt-4 items-center justify-between px-4  ">
             <h2 className="font-medium">My Orders</h2>
             <IoMdClose onClick={() => setOpen(false)} className=" cursor-pointer" />
           </div>
-          <ItemsCard/>
+         <div className="overflow-y-scroll h-[70vh]">
+         <ItemsCard />
+          <ItemsCard />
+          <ItemsCard />
+          <ItemsCard />
+          <ItemsCard />
+          <ItemsCard />
+         </div>
+          
+
+          <div className="absolute bottom-4 left-4 space-y-4">
+            <h3>Items:</h3>
+            <h4>Total Aamount</h4>
+            <button className='bg-[#FED700] w-[90vw] lg:w-[18vw] hover:bg-black hover:text-white  rounded-xl transition-all ease-in-out duration-100  px-3 py-2'>Checkout</button>
+          </div>
         </section>
       }
 
