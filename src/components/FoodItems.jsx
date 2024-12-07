@@ -8,6 +8,7 @@ const FoodItems = () => {
             {
                 FoodData.map((item) => (
                     <FoodCard key={item.id}
+                        id={item.id}
                         img={item.img}
                         name={item.name}
                         price={item.price}
